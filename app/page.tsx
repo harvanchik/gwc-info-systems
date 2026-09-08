@@ -1,3 +1,4 @@
+import { sitePath } from '@/lib/site-path';
 import { BackToTop } from '@/components/back-to-top';
 import { Skeleton } from '@/components/ui/skeleton';
 import { UserRound } from 'lucide-react';
@@ -32,8 +33,11 @@ export default function Home() {
       <section id="services" className="section container services-section"><div className="section-heading"><p className="eyebrow">03 / SERVICES</p><h2>Services</h2></div><ol className="services-list">{services.map((service,index)=><li key={service}><span className="service-number">0{index+1}</span><h3>{service}</h3><span className="service-mark" aria-hidden="true">—</span></li>)}</ol></section>
       <section className="contact-section" id="contact"><div className="container contact-grid"><div><p className="eyebrow">04 / CONTACT</p><h2>Get in Touch</h2><p className="contact-name">GWC Information Systems, LLC</p><address><a href={maps}>18375 Ventura Blvd., #801<br />Tarzana, CA 91356-4218 </a></address></div><div className="contact-methods"><a href="tel:+13109203603"><span className="small-label">CALL LEW</span><span className="contact-value">{phone}</span></a><a href={`mailto:${email}`}><span className="small-label">EMAIL US</span><span className="contact-value">{email}</span></a></div></div></section>
     </main>
-    <footer className="site-footer"><div className="container compact-footer"><span>© 2026 GWC Information Systems, LLC</span><div className="footer-links"><a href="/privacy">Privacy</a><a href="/accessibility">Accessibility</a></div></div></footer>
+    <footer className="site-footer"><div className="container compact-footer"><span>© 2026 GWC Information Systems, LLC</span><div className="footer-links"><a href={sitePath('/privacy/')}>Privacy</a><a href={sitePath('/accessibility/')}>Accessibility</a></div></div></footer>
     <BackToTop />
   </>;
 }
 
+
+
+export const dynamic = 'force-static';

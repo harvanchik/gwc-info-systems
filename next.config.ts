@@ -1,5 +1,9 @@
 import type { NextConfig } from 'next';
+const nextConfig: NextConfig = process.env.GITHUB_PAGES_BUILD === '1' ? {
+  output: 'export',
 
-const nextConfig: NextConfig = {};
-
+  trailingSlash: false,
+} : {};
 export default nextConfig;
+
+
