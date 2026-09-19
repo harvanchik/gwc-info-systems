@@ -4,7 +4,7 @@ import { BackToTop } from '@/components/back-to-top';
 const phone = '(310) 920-3603';
 const email = 'lweiner@gwcis.com';
 const maps = 'https://www.google.com/maps/search/18375+Ventura+Blvd.,+%23801+Tarzana,+CA+91356-4218?entry=gmail&source=g';
-const services = ['Sage 100 software implementation, training & support'];
+const services = ['Sage 100 software implementation', 'Sage 100 training', 'Sage 100 support'];
 export default function Home() {
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
