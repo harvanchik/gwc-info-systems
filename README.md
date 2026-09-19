@@ -38,7 +38,7 @@ For a custom domain hosted at its root, set `PAGES_BASE_PATH` to an empty string
 
 ## Content and verification
 
-Lew’s supplied portrait and legible handwritten edits from September 18, 2026 are included. The affiliation URL remains pending confirmation.
+Lew’s supplied portrait and legible handwritten edits from September 18, 2026 are included. The affiliation link to https://technology-partners.com was confirmed by the client.
 
 - `app/page.tsx`: primary website content
 - `app/globals.css`: responsive styling
@@ -47,3 +47,4 @@ Lew’s supplied portrait and legible handwritten edits from September 18, 2026 
 - `scripts/verify-dist.mjs`: checks exported pages, CSS, and local links
 
 The compiled Pages build was browser-tested at 320, 390, and 1280 pixels, including direct loads of all three pages, navigation, CSS loading, and the back-to-top control, with no page errors or failed asset requests. Earlier accessibility checks covered 200% text enlargement, keyboard access, and automated WCAG checks. These are not legal certification or a full assistive-technology audit.
+

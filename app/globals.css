@@ -155,3 +155,6 @@ h1,h2,h3,.hero-description,.eyebrow,.established p { overflow-wrap:anywhere; }
 .hero-inner { display:block; }
 .hero-copy { max-width:800px; }
 .portrait-photo { display:block; width:100%; height:auto; border-radius:2px; }
+
+.affiliation-link { text-decoration:underline; text-underline-offset:4px; }
+.affiliation-link:hover { color:#183348; }

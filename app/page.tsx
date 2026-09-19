@@ -24,7 +24,7 @@ export default function Home() {
       <section className="lew-section" id="lew" aria-labelledby="lew-heading"><div className="container lew-grid">
         <figure className="portrait"><img className="portrait-photo" src={sitePath('/images/lew-weiner.png')} alt="Lew Weiner" width={541} height={768} loading="lazy" decoding="async" /><figcaption>Lew Weiner <span>GWC Information Systems, LLC</span></figcaption></figure>
         <div className="lew-copy"><p className="eyebrow">02 / ABOUT LEW</p><h2 id="lew-heading">Lew Weiner</h2><p className="role">Manager / Owner</p><p className="lead">Lew Weiner has spent his career in enterprise software and financial systems, holding an MBA in Business from Fairleigh Dickinson University.</p><p>He works directly with clients on Sage 100 implementation, so businesses get hands-on expertise instead of a call center.</p>
-          <div className="lew-details"><div><h3>Education</h3><p>MBA in Business<br />Fairleigh Dickinson University</p></div><div><h3>Professional affiliation</h3><p>Affiliated with Technology Integrators Partners</p></div></div>
+          <div className="lew-details"><div><h3>Education</h3><p>MBA in Business<br />Fairleigh Dickinson University</p></div><div><h3>Professional affiliation</h3><p>Affiliated with <a className="affiliation-link" href="https://technology-partners.com">Technology Integrators Partners</a></p></div></div>
           <a className="profile-link" href="https://www.linkedin.com/in/lew-weiner-7409a540/">View Lew’s LinkedIn profile</a>
         </div>
       </div></section>
@@ -39,3 +39,4 @@ export default function Home() {
 
 
 export const dynamic = 'force-static';
+
