@@ -38,7 +38,7 @@ For a custom domain hosted at its root, set `PAGES_BASE_PATH` to an empty string
 
 ## Content and verification
 
-The headshot is a placeholder. Services use client-supplied draft copy. Confirm business copy before public launch.
+Lew’s supplied portrait and legible handwritten edits from September 18, 2026 are included. The affiliation URL remains pending confirmation.
 
 - `app/page.tsx`: primary website content
 - `app/globals.css`: responsive styling

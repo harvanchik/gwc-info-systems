@@ -151,3 +151,7 @@ h1,h2,h3,.hero-description,.eyebrow,.established p { overflow-wrap:anywhere; }
 .services-list h3 { min-width:0; }
 .service-number,.service-mark { flex-shrink:0; }
 @media(max-width:650px){.established{grid-template-columns:minmax(0,auto) minmax(0,1fr)}.header nav{column-gap:20px}.service-mark{display:none}}
+/* September 2026 client edits: simplified hero and supplied portrait. */
+.hero-inner { display:block; }
+.hero-copy { max-width:800px; }
+.portrait-photo { display:block; width:100%; height:auto; border-radius:2px; }

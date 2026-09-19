@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { sitePath } from '@/lib/site-path';
 export const metadata: Metadata = {
-  title: 'GWC Information Systems, LLC | Sage Accounting Software Consulting',
-  description: 'Sage accounting software consulting for small and mid-size businesses in Los Angeles and beyond.',
+  title: 'GWC Information Systems, LLC | Sage 100 Accounting Software Consulting',
+  description: 'Sage 100 accounting software consulting for small and mid-size businesses.',
   robots: { index: process.env.GITHUB_PAGES_BUILD === '1', follow: process.env.GITHUB_PAGES_BUILD === '1' },
   icons: { icon: sitePath('/favicon.svg') },
 };

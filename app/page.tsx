@@ -1,12 +1,10 @@
 import { sitePath } from '@/lib/site-path';
 import { BackToTop } from '@/components/back-to-top';
-import { Skeleton } from '@/components/ui/skeleton';
-import { UserRound } from 'lucide-react';
 
 const phone = '(310) 920-3603';
 const email = 'lweiner@gwcis.com';
 const maps = 'https://www.google.com/maps/search/18375+Ventura+Blvd.,+%23801+Tarzana,+CA+91356-4218?entry=gmail&source=g';
-const services = ['Sage software implementation', 'Bank reconciliation support', 'Budgeting and financial systems consulting', 'Ongoing software support'];
+const services = ['Sage 100 software implementation, training & support'];
 export default function Home() {
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
@@ -18,14 +16,14 @@ export default function Home() {
     <main id="main" tabIndex={-1}>
       <section className="hero"><div className="container hero-inner"><div className="hero-copy">
         <p className="eyebrow"><span /> GWC INFORMATION SYSTEMS, LLC</p>
-        <h1>Sage accounting<br className="desktop-break" /> software consulting</h1>
-        <p className="hero-description">for small and mid-size businesses in Los Angeles and beyond.</p>
+        <h1>Sage 100 accounting<br className="desktop-break" /> software consulting</h1>
+        <p className="hero-description">for small and mid-size businesses.</p>
         <a className="primary-link" href="#contact">Get in Touch </a>
-      </div><aside className="established" aria-label="Established in 1999"><span className="small-label">ESTABLISHED</span><strong>1999</strong><span className="established-rule" /><p>GWC Information<br />Systems, LLC</p><span className="location">Tarzana, California</span></aside></div></section>
-      <section id="about" className="section about container"><div className="section-heading"><p className="eyebrow">01 / ABOUT GWC</p><h2>About GWC</h2></div><div className="about-copy"><p className="lead">GWC Information Systems has helped businesses implement and manage their accounting systems since 1999.</p><p>We focus on getting Sage software set up right the first time, so your books stay accurate and your team stays productive.</p></div></section>
+      </div></div></section>
+      <section id="about" className="section about container"><div className="section-heading"><p className="eyebrow">01 / ABOUT GWC</p><h2>About GWC</h2></div><div className="about-copy"><p className="lead">GWC Information Systems has helped businesses implement and manage their accounting systems since 1990.</p><p>We focus on getting Sage 100 software set up right the first time, so your books stay accurate and your team stays productive.</p></div></section>
       <section className="lew-section" id="lew" aria-labelledby="lew-heading"><div className="container lew-grid">
-        <figure className="portrait"><Skeleton className="portrait-placeholder"><UserRound aria-hidden="true" /><span>Portrait of Lew</span><small>Photo coming soon</small></Skeleton><figcaption>Lew Weiner <span>GWC Information Systems, LLC</span></figcaption></figure>
-        <div className="lew-copy"><p className="eyebrow">02 / ABOUT LEW</p><h2 id="lew-heading">Lew Weiner</h2><p className="role">Manager / Owner</p><p className="lead">Lew Weiner has spent his career in enterprise software and financial systems, holding an MBA in Business from Fairleigh Dickinson University.</p><p>He works directly with clients on Sage implementation, budgeting, and bank reconciliation, so businesses get hands-on expertise instead of a call center.</p>
+        <figure className="portrait"><img className="portrait-photo" src={sitePath('/images/lew-weiner.png')} alt="Lew Weiner" width={541} height={768} loading="lazy" decoding="async" /><figcaption>Lew Weiner <span>GWC Information Systems, LLC</span></figcaption></figure>
+        <div className="lew-copy"><p className="eyebrow">02 / ABOUT LEW</p><h2 id="lew-heading">Lew Weiner</h2><p className="role">Manager / Owner</p><p className="lead">Lew Weiner has spent his career in enterprise software and financial systems, holding an MBA in Business from Fairleigh Dickinson University.</p><p>He works directly with clients on Sage 100 implementation, so businesses get hands-on expertise instead of a call center.</p>
           <div className="lew-details"><div><h3>Education</h3><p>MBA in Business<br />Fairleigh Dickinson University</p></div><div><h3>Professional affiliation</h3><p>Affiliated with Technology Integrators Partners</p></div></div>
           <a className="profile-link" href="https://www.linkedin.com/in/lew-weiner-7409a540/">View Lew’s LinkedIn profile</a>
         </div>
