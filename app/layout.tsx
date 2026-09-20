@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { sitePath } from '@/lib/site-path';
 import { siteUrl, seoDescription } from '@/lib/seo';
-const title = 'Sage 100 Implementation, Training & Support | GWC Information Systems';
+const title = 'GWC Information Systems | Sage 100 Implementation, Training & Support';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
