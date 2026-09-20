@@ -30,6 +30,8 @@ for (const route of ['privacy', 'accessibility']) {
 }
 await optimize(stage);
 await writeFile(path.join(stage, '.nojekyll'), '');
+const siteUrl = 'https://harvanchik.github.io' + base + '/';
+await writeFile(path.join(stage, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ['', 'privacy/', 'accessibility/'].map(route => '<url><loc>' + siteUrl + route + '</loc></url>').join('') + '</urlset>\n');
 // Replace only the build output inside this repository, after staging succeeds.
 if (path.dirname(dist) !== root.replace(/[\\/]$/, '')) throw new Error('Unsafe output directory');
 await rm(dist, { recursive: true, force: true });

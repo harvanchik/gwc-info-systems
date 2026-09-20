@@ -23,3 +23,21 @@ for (const route of ['index.html', 'privacy/index.html', 'accessibility/index.ht
 await stat(path.join(dist, '.nojekyll'));
 console.log(`Verified all exported pages and ${checked} local asset/link references.`);
 
+const productionOrigin = 'https://harvanchik.github.io';
+for (const [file, route] of [['index.html', '/'], ['privacy/index.html', '/privacy/'], ['accessibility/index.html', '/accessibility/']]) {
+ const html = await readFile(path.join(dist, file), 'utf8');
+ const expected = productionOrigin + base + route;
+ if (!html.includes(`rel="canonical" href="${expected}"`)) throw new Error(`Incorrect canonical: ${file}`);
+ if (!/name="description" content="[^"]+"/.test(html)) throw new Error(`Missing description: ${file}`);
+ if (/content="[^"]*noindex/.test(html)) throw new Error(`Unexpected noindex: ${file}`);
+}
+const home = await readFile(path.join(dist, 'index.html'), 'utf8');
+const schemaMatch = home.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+if (!schemaMatch) throw new Error('Missing business schema');
+const schema = JSON.parse(schemaMatch[1]);
+if (schema.url !== productionOrigin + base + '/' || schema.hasOfferCatalog.itemListElement.length !== 3) throw new Error('Invalid business schema');
+const sitemap = await readFile(path.join(dist, 'sitemap.xml'), 'utf8');
+for (const route of ['/', '/privacy/', '/accessibility/']) {
+ if (!sitemap.includes(`<loc>${productionOrigin}${base}${route}</loc>`)) throw new Error(`Missing sitemap route: ${route}`);
+}
+console.log('Verified canonical URLs, indexing, descriptions, business schema and sitemap.');

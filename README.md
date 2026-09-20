@@ -38,7 +38,7 @@ For a custom domain hosted at its root, set `PAGES_BASE_PATH` to an empty string
 
 ## Content and verification
 
-Lew’s supplied portrait and legible handwritten edits from September 18, 2026 are included. The affiliation link to https://technology-partners.com was confirmed by the client.
+Lew’s supplied portrait and legible handwritten edits from September 18, 2026 are included. The affiliation link to https://www.technology-integrators.com/ was confirmed by the client.
 
 - `app/page.tsx`: primary website content
 - `app/globals.css`: responsive styling
@@ -48,3 +48,7 @@ Lew’s supplied portrait and legible handwritten edits from September 18, 2026 
 
 The compiled Pages build was browser-tested at 320, 390, and 1280 pixels, including direct loads of all three pages, navigation, CSS loading, and the back-to-top control, with no page errors or failed asset requests. Earlier accessibility checks covered 200% text enlargement, keyboard access, and automated WCAG checks. These are not legal certification or a full assistive-technology audit.
 
+
+## Search visibility
+
+Production pages have descriptive titles, descriptions, canonical URLs, social metadata, and business/service structured data using confirmed client information. The Pages build exports `sitemap.xml`; submit https://harvanchik.github.io/gwc-info-systems/sitemap.xml in a verified Google Search Console property to request discovery. No analytics or tracking was added. A project-level robots.txt would not control this GitHub Pages subdirectory, so none is used. Indexing and ranking are determined by search engines, not guaranteed by these changes. Update `lib/seo.ts`, page canonicals, and sitemap generation when moving to a custom domain.
